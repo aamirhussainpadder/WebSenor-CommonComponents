@@ -16,14 +16,14 @@ import {
   Text,
 } from 'react-native';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { Colors as Color } from 'react-native/Libraries/NewAppScreen';
 import { Card } from './src/components/common/Card/Card';
-import { isDarkMode } from './src/constants/colors';
+import { isDarkMode, Colors } from './src/constants/colors';
 
 const App: () => Node = () => {
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Color.lighter : Color.darker,
   };
   const colorByTheme = isDarkMode ? '#fff' : '#000'
 
@@ -35,32 +35,32 @@ const App: () => Node = () => {
         style={backgroundStyle}>
         <Card title="MacBook Pro">
           Grab @ <Text style={[styles.highlight, {
-            color: colorByTheme
+            color: Colors.colorByTheme
           }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
         </Card>
         <Card title="MacBook Pro">
           Grab @ <Text style={[styles.highlight, {
-            color: colorByTheme
+            color: Colors.colorByTheme
           }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
         </Card>
         <Card title="MacBook Pro">
           Grab @ <Text style={[styles.highlight, {
-            color: colorByTheme
+            color: Colors.colorByTheme
           }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
         </Card>
         <Card title="MacBook Pro">
           Grab @ <Text style={[styles.highlight, {
-            color: colorByTheme
+            color: Colors.colorByTheme
           }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
         </Card>
         <Card title="MacBook Pro">
           Grab @ <Text style={[styles.highlight, {
-            color: colorByTheme
+            color: Colors.colorByTheme
           }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
         </Card>
         <Card title="MacBook Pro">
           Grab @ <Text style={[styles.highlight, {
-            color: colorByTheme
+            color: Colors.colorByTheme
           }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
         </Card>
 
