@@ -17,15 +17,14 @@ import {
 } from 'react-native';
 
 import { Colors as Color } from 'react-native/Libraries/NewAppScreen';
-import { Card } from './src/components/common/Card/Card';
 import { isDarkMode, Colors } from './src/constants/colors';
+import Flatlist from './src/components/common/Flatlist.js/Flatlist';
 
 const App: () => Node = () => {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Color.lighter : Color.darker,
   };
-  const colorByTheme = isDarkMode ? '#fff' : '#000'
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -33,37 +32,8 @@ const App: () => Node = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Card title="MacBook Pro">
-          Grab @ <Text style={[styles.highlight, {
-            color: Colors.colorByTheme
-          }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
-        </Card>
-        <Card title="MacBook Pro">
-          Grab @ <Text style={[styles.highlight, {
-            color: Colors.colorByTheme
-          }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
-        </Card>
-        <Card title="MacBook Pro">
-          Grab @ <Text style={[styles.highlight, {
-            color: Colors.colorByTheme
-          }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
-        </Card>
-        <Card title="MacBook Pro">
-          Grab @ <Text style={[styles.highlight, {
-            color: Colors.colorByTheme
-          }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
-        </Card>
-        <Card title="MacBook Pro">
-          Grab @ <Text style={[styles.highlight, {
-            color: Colors.colorByTheme
-          }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
-        </Card>
-        <Card title="MacBook Pro">
-          Grab @ <Text style={[styles.highlight, {
-            color: Colors.colorByTheme
-          }]}>Rs 1.20 lac</Text> SUPERCHARGED BY M2. 10-core GPU and up to 24GB of unified memory.
-        </Card>
 
+        <Flatlist />
 
       </ScrollView>
     </SafeAreaView>
